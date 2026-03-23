@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Forever Project – Frontend</title>
+  <title>Forever Project – Admin</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -26,8 +26,8 @@
     }
     .tag {
       display: inline-block;
-      background: #e8f0fe;
-      color: #1a73e8;
+      background: #f3e8fd;
+      color: #7c3aed;
       font-size: 0.75rem;
       font-weight: bold;
       padding: 4px 12px;
@@ -52,15 +52,26 @@
     .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-2px); }
     .card-left { display: flex; align-items: center; gap: 14px; }
     .icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; }
-    .icon-blue  { background: #e8f0fe; }
-    .icon-green { background: #e6f4ea; }
+    .icon-purple { background: #f3e8fd; }
+    .icon-green  { background: #e6f4ea; }
     .card-title { font-size: 0.95rem; font-weight: bold; color: #111; margin-bottom: 2px; }
     .card-desc  { font-size: 0.78rem; color: #888; }
     .arrow { font-size: 1rem; color: #aaa; }
+    .cred-box {
+      background: #f0f7ff;
+      border: 1px solid #b3d4ff;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .cred-box p { font-size: 0.85rem; color: #444; margin-bottom: 6px; }
+    .cred-box p:last-child { margin-bottom: 0; }
+    .cred-box strong { color: #111; }
     .launch-btn {
       width: 100%;
       padding: 13px;
-      background: #007bff;
+      background: #7c3aed;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -69,24 +80,24 @@
       transition: background 0.2s, transform 0.2s;
       margin-bottom: 10px;
     }
-    .launch-btn:hover { background: #0056b3; transform: translateY(-2px); }
+    .launch-btn:hover { background: #5b21b6; transform: translateY(-2px); }
     .note { font-size: 0.78rem; color: #aaa; }
     footer { margin-top: 28px; font-size: 0.8rem; color: #bbb; }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="tag">FULL STACK PROJECT</div>
+    <div class="tag">ADMIN + BACKEND</div>
     <h1>Forever E-Commerce</h1>
-    <p class="subtitle">Customer storefront powered by a REST API backend.</p>
+    <p class="subtitle">Admin dashboard and REST API backend for managing the platform.</p>
 
     <div class="cards">
-      <a href="https://forever-full-stack-e-commerce-frontend.onrender.com/" target="_blank" class="card">
+      <a href="https://forever-full-stack-e-commerce-admin.onrender.com/" target="_blank" class="card">
         <div class="card-left">
-          <div class="icon icon-blue">🛍️</div>
+          <div class="icon icon-purple">🔒</div>
           <div>
-            <div class="card-title">Frontend</div>
-            <div class="card-desc">Customer-facing storefront</div>
+            <div class="card-title">Admin Panel</div>
+            <div class="card-desc">Manage products, orders & inventory</div>
           </div>
         </div>
         <span class="arrow">↗</span>
@@ -103,7 +114,13 @@
       </a>
     </div>
 
-    <button class="launch-btn" onclick="launchAll()">Open Frontend + Backend ↗</button>
+    <div class="cred-box">
+      <p><strong>Admin Login Credentials</strong></p>
+      <p>Email: admin@example.com</p>
+      <p>Password: greatstack123</p>
+    </div>
+
+    <button class="launch-btn" onclick="launchAll()">Open Admin + Backend ↗</button>
     <div class="note">Or click each card above to open individually</div>
     <footer>&copy; 2025 Forever | All rights reserved.</footer>
   </div>
@@ -111,7 +128,7 @@
   <script>
     function launchAll() {
       window.open("https://forever-full-stack-e-commerce-backend.onrender.com/", "_blank");
-      window.location.href = "https://forever-full-stack-e-commerce-frontend.onrender.com/";
+      window.location.href = "https://forever-full-stack-e-commerce-admin.onrender.com/";
     }
   </script>
 </body>
