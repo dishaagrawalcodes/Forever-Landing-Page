@@ -4,27 +4,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Forever Project</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .container {
+      max-width: 500px;
+      padding: 30px;
+      background: #ffffff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: 10px; }
+    p { font-size: 1rem; color: #555; margin-bottom: 24px; }
+    .btn {
+      display: inline-block;
+      padding: 12px 32px;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+    }
+    .btn:hover { background-color: #0056b3; transform: translateY(-2px); }
+    .note { font-size: 0.8rem; color: #aaa; margin-top: 16px; }
+  </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Welcome to Forever Project</h1>
-      <p>Select a part of the project to explore:</p>
-    </header>
-    <main>
-      <a href="https://forever-full-stack-e-commerce-frontend.onrender.com/" target="_blank" class="btn">Frontend</a>
-      <a href="https://forever-full-stack-e-commerce-backend.onrender.com/" target="_blank" class="btn">Backend</a>
-      <a href="https://forever-full-stack-e-commerce-admin.onrender.com/" target="_blank" class="btn">Admin Portal</a>
-    </main>
-      <div class="credentials">
-      <h2>Admin Portal Login Credentials</h2>
-      <p><strong>E-mail address:</strong> admin@example.com</p>
-      <p><strong>Password:</strong> greatstack123</p>
-    </div>
-    <footer>
-      <p>&copy; 2025 Forever | All rights reserved.</p>
-    </footer>
+    <h1>Forever Project</h1>
+    <p>Opening all parts of the project...</p>
+    <button class="btn" onclick="launchAll()">Click here if tabs didn't open</button>
+    <div class="note">Your browser may have blocked the tabs. Click the button above to open them.</div>
   </div>
+
+  <script>
+    // Auto-opens all 3 tabs as soon as the page loads
+    window.onload = function () {
+      launchAll();
+    };
+
+    function launchAll() {
+      window.open("https://forever-full-stack-e-commerce-frontend.onrender.com/", "_blank");
+      window.open("https://forever-full-stack-e-commerce-backend.onrender.com/", "_blank");
+      window.open("https://forever-full-stack-e-commerce-admin.onrender.com/", "_blank");
+    }
+  </script>
 </body>
 </html>
